@@ -1,0 +1,64 @@
+<html>
+<head>
+<title> Inventario </title>
+
+	<style>                
+
+        img {
+            width: 400px;                                                
+        }
+
+        #caracteristicas {
+            width: 200px;           
+            border-radius: 10px;
+            border: 2px solid black;
+            padding: 10px 5px;
+            position: absolute;
+            top: 50px;
+            left: 210px;
+            font-family: sans-serif;
+            display: none;
+        }
+
+        #caracteristicas span {
+            position: relative;
+            left: 175px;
+            color: blue;
+            cursor: pointer;
+            font-weight: bold;        
+        }
+    	</style>
+</head>
+
+<body> Inventario UCAD </p>
+	<center><img id="img" src="820G3.jpg">
+
+	<div id="caracteristicas">
+        	<span id="cerrar">X</span>
+        	<ul>
+            		<li>HP 820 G3</li>
+            		<li>Procesador Core i7</li>
+            		<li>Memoria ram 16GB</li>
+            		<li>Disco estado solido 256GB</li>
+        	</ul>
+    	</div>
+
+	<script>
+        	var imagen = document.getElementById('img');
+        	var cerrar = document.getElementById('cerrar');
+        	var ventana = document.getElementById("caracteristicas");
+
+        	imagen.addEventListener('click',function(){
+            		console.log("mostrar!!");
+            		ventana.style.display = 'flex';   
+        	})        
+
+        	cerrar.addEventListener('click', function() {
+            	console.log("ocultar!!");
+            	ventana.style.display = 'none';
+       	 	})
+    	</script>
+
+
+</body>
+</html>
